@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title class="sites-name">Antools</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="icon" href="./images/website-logo.png" type="image/x-icon" />
+  </head>
+  <body>
+    <div class="container">
+      <header>
+        <img class="logo" src="./images/website-logo.png" alt="Website logo" />
+        <p class="sites-name">antools.</p>
+
+        <nav class="navigate">
+          <ul>
+            <li>Home</li>
+            <li>Categories</li>
+            <li>My Collections</li>
+            <li>Blog</li>
+          </ul>
+        </nav>
+
+        <button class="login" type="button">Login</button>
+        <button class="sign-up" type="button">Sign Up</button>
+
+        <h1>
+          Awesome tools for <br />
+          Designer & Developer<span>.</span>
+        </h1>
+        <p class="h1-subtext">
+          Antool is a web collection of information on paid or <br />
+          free Design and Development tools
+        </p>
+        <div class="search-input-content">
+          <input
+            class="search-input"
+            type="text"
+            placeholder="find more than 430+ tools..."
+          />
+          <img
+            class="search-icon"
+            src="./images/search.png"
+            alt="search-icon"
+          />
+          <button class="search-btn" type="button">Search</button>
+        </div>
+        <a class="facebook-logo" href="#">
+          <img src="./images/facebook-icon.png" alt="facebook-logo" />
+        </a>
+        <a class="insta-logo" href="#">
+          <img src="./images/instagram-icon.png" alt="insta-logo" />
+        </a>
+        <a class="twitter-logo" href="#">
+          <img src="./images/twitter-icon.png" alt="twitter-logo" />
+        </a>
+
+        <img class="many-svg" src="./images/Illustration.png" alt="" />
+      </header>
+      <main>
+        <section class="popular">
+          <h2 class="popular-title">Most Popular Tools</h2>
+          <p class="popular-signature">
+            Tools for the best Designers and Developers <br> most popularly used in
+            the world
+          </p> 
+          <ul class="first-popular-ul"> 
+            <li id="li1" class="first-li1 animation-class">
+              <img class="popular-logo" src="./images/figma-logo.png" alt="figma-logo" />
+              <h5 id="title1">FIGMA</h5>
+              <p id="text11">Free</p>
+
+              <p id="text12">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button id="likebtn" onclick="like1()" class="likebtn" type="button">
+                <img id="like-icon1" class="like-icon" src="./images/like-icon.png" alt="like-icon" />
+                <img style="display: none;" id="like-icon-active1" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+              </button>
+              <button class="folderbtn" type="button">
+                <img src="./images/folder-icon.png" alt="folder-icon" />
+              </button>
+              <a href="">
+                <button id="visitbtn1" class="figma-visitbtn visitbtn" type="button">Visit</button>
+              </a>
+            </li>
+            <li id="li2" class="second-li1 animation-class">
+              <img class="popular-logo" src="./images/sketch-logo.png" alt="sketch-logo" />
+              <h5 id="title2">Sketch</h5>
+              <p id="text21">Trial & Paid</p>
+
+              <p id="text22">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <button onclick="like2()" class="likebtn" type="button">
+                <img id="like-icon2" class="like-icon" src="./images/like-icon.png" alt="" />
+                <img style="display: none;" id="like-icon-active2" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+              </button>
+              <button class="folderbtn" type="button">
+                <img src="./images/folder-icon.png" alt="" />
+              </button>
+              <a href="">
+                <button id="visitbtn2" class="visitbtn" type="button">Visit</button>
+              </a>
+            </li>
+            <li id="li3" class="third-li1 animation-class">
+              <img class="popular-logo" src="./images/vscode-logo.png" alt="vscode-logo" />
+              <h5 id="title3">Visual Studio Code</h5>
+              <p id="text31">Free</p>
+
+              <p id="text32">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button onclick="like3()" class="likebtn" type="button">
+                <img id="like-icon3" class="like-icon" src="./images/like-icon.png" alt="" />
+                <img style="display: none;" id="like-icon-active3" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+              </button>
+              <button class="folderbtn" type="button">
+                <img src="./images/folder-icon.png" alt="" />
+              </button>
+              <a href="">
+                <button id="visitbtn3" class="visitbtn" type="button">Visit</button>
+              </a>
+            </li>
+          </ul>
+          <ul class="second-popular-ul">
+            <li>
+              <img  src="" alt="" />
+              <h5>Notion</h5>
+              <p>Free & Paid</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <h5>Slack</h5>
+              <p>Free & Paid</p>
+
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <h5>Invision</h5>
+              <p>Free & Paid</p>
+
+              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <button type="button">
+                <img src="" alt="" />
+              </button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+          </ul>
+          <button type="button">Load more</button>
+        </section>
+        <section>
+          <h4>Trusted more than 150+ brand</h4>
+          <img src="" alt="microsoft" />
+          <img src="" alt="google" />
+          <img src="" alt="slack" />
+          <img src="" alt="WordPress" />
+        </section>
+        <section>
+          <h2>Newcomer Tools</h2>
+          <p>
+            Wow! see the latest update of the most recommended tools from
+            reliable designers and developers
+          </p>
+          <button type="button">Explore more</button>
+
+          <ul>
+            <li>
+              <img src="" alt="" />
+              <h5>Zeplin</h5>
+              <p>Free & Paid</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button"></button>
+              <button type="button"></button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <h5>PHPStorm</h5>
+              <p>Free</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button"></button>
+              <button type="button"></button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+          </ul>
+          <ul>
+            <li>
+              <img src="" alt="" />
+              <h5>Toolbox</h5>
+              <p>Free</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button"></button>
+              <button type="button"></button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+            <li>
+              <img src="" alt="" />
+              <h5>Procreate</h5>
+              <p>Paid</p>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <button type="button"></button>
+              <button type="button"></button>
+              <a href="">
+                <button type="button">Visit</button>
+              </a>
+            </li>
+          </ul>
+        </section>
+        <section>
+          <button disabled="disabled"></button>
+          <div>
+            <img src="" alt="man" />
+            <h3>Ronald Richards</h3>
+            <p>Product Manager</p>
+            <p>“</p>
+            <p>
+              Incididunt cillum do sint sint enim ullamco id deserunt mollit qui
+              reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do
+              nulla velit labore occaecat do deserunt Lorem magna officia
+              incididunt consectetur amet. Sunt consectetur veniam minim ex
+              commodo sint non. Occaecat aute officia excepteur non laboris id
+              qui ad.
+            </p>
+          </div>
+          <button type="button"></button>
+          <ul>
+            <li><div></div></li>
+            <li><div></div></li>
+          </ul>
+        </section>
+        <section>
+          <h2>Become a contributor?</h2>
+          <p>
+            Join us and get tips & tricks to become a great Designer and
+            Developer
+          </p>
+          <input
+            type="email"
+            name="email"
+            id="email"
+            placeholder="Enter your email..."
+          />
+          <button type="button">Join Us</button>
+        </section>
+      </main>
+      <footer>
+        <div></div>
+        <section>
+          <img src="" alt="Website logo" />
+          <p>antools.</p>
+          <p>Copyright 2021. Antools</p>
+          <p>
+            Antool is a web collection of information on paid or free Design and
+            Development tools
+          </p>
+        </section>
+        <section>
+          <p>Contact us</p>
+          <a href="tel:+621987463">+621987463</a>
+          <a href="№">M Bulding, No.10 A</a>
+          <a href="mailto:antools@awesome.com">antools@awesome.com</a>
+        </section>
+        <section>
+          <p>Categories</p>
+          <p>Design</p>
+          <p>Development</p>
+        </section>
+        <section>
+          <p>Company info</p>
+          <p>About us</p>
+          <p>Our Partners</p>
+          <p>Blog</p>
+        </section>
+      </footer>
+    </div>
+    <script src="./js/index.js"></script>
+  </body>
+</html>
