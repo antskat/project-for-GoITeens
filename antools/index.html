@@ -4,7 +4,11 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title class="sites-name">Antools</title>
-    <link rel="stylesheet" href="./css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+    <link rel="stylesheet" href="./css/style.css" />
     <link rel="icon" href="./images/website-logo.png" type="image/x-icon" />
   </head>
   <body>
@@ -60,215 +64,667 @@
       </header>
       <main>
         <section class="popular">
-          <h2 class="popular-title">Most Popular Tools</h2>
-          <p class="popular-signature">
-            Tools for the best Designers and Developers <br> most popularly used in
-            the world
-          </p> 
-          <ul class="first-popular-ul"> 
+          <h2 class="popular-title ttitle">Most Popular Tools</h2>
+          <p class="popular-signature ttext">
+            Tools for the best Designers and Developers <br />
+            most popularly used in the world
+          </p>
+          <ul class="first-popular-ul">
             <li id="li1" class="first-li1 animation-class">
-              <img class="popular-logo" src="./images/figma-logo.png" alt="figma-logo" />
+              <img
+                class="popular-logo"
+                src="./images/figma-logo.png"
+                alt="figma-logo"
+              />
               <h5 id="title1">FIGMA</h5>
               <p id="text11">Free</p>
 
-              <p id="text12">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button id="likebtn" onclick="like1()" class="likebtn" type="button">
-                <img id="like-icon1" class="like-icon" src="./images/like-icon.png" alt="like-icon" />
-                <img style="display: none;" id="like-icon-active1" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+              <p id="text12">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button
+                id="likebtn"
+                onclick="like1()"
+                class="likebtn"
+                type="button"
+              >
+                <img
+                  id="like-icon1"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active1"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button class="folderbtn" type="button">
-                <img src="./images/folder-icon.png" alt="folder-icon" />
+              <button onclick="addToFolder1()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button id="visitbtn1" class="figma-visitbtn visitbtn" type="button">Visit</button>
+              <a href="https://www.figma.com/">
+                <button
+                  id="visitbtn1"
+                  class="figma-visitbtn visitbtn"
+                  type="button"
+                >
+                  Visit
+                </button>
               </a>
             </li>
             <li id="li2" class="second-li1 animation-class">
-              <img class="popular-logo" src="./images/sketch-logo.png" alt="sketch-logo" />
+              <img
+                class="popular-logo"
+                src="./images/sketch-logo.png"
+                alt="sketch-logo"
+              />
               <h5 id="title2">Sketch</h5>
               <p id="text21">Trial & Paid</p>
 
-              <p id="text22">Lorem ipsum, dolor sit amet consectetur adipisicing elit.</p>
+              <p id="text22">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
               <button onclick="like2()" class="likebtn" type="button">
-                <img id="like-icon2" class="like-icon" src="./images/like-icon.png" alt="" />
-                <img style="display: none;" id="like-icon-active2" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+                <img
+                  id="like-icon2"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt=""
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active2"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button class="folderbtn" type="button">
-                <img src="./images/folder-icon.png" alt="" />
+              <button onclick="addToFolder2()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg2"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button id="visitbtn2" class="visitbtn" type="button">Visit</button>
+              <a href="https://www.sketch.com/">
+                <button id="visitbtn2" class="visitbtn" type="button">
+                  Visit
+                </button>
               </a>
             </li>
             <li id="li3" class="third-li1 animation-class">
-              <img class="popular-logo" src="./images/vscode-logo.png" alt="vscode-logo" />
+              <img
+                class="popular-logo"
+                src="./images/vscode-logo.png"
+                alt="vscode-logo"
+              />
               <h5 id="title3">Visual Studio Code</h5>
               <p id="text31">Free</p>
 
-              <p id="text32">Lorem, ipsum dolor sit amet consectetur adipisicing elit.</p>
+              <p id="text32">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
               <button onclick="like3()" class="likebtn" type="button">
-                <img id="like-icon3" class="like-icon" src="./images/like-icon.png" alt="" />
-                <img style="display: none;" id="like-icon-active3" class="like-icon-active" src="./images/like-icon-active.png" alt="like-icon-active">
+                <img
+                  id="like-icon3"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active3"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button class="folderbtn" type="button">
-                <img src="./images/folder-icon.png" alt="" />
+              <button onclick="addToFolder3()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg3"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button id="visitbtn3" class="visitbtn" type="button">Visit</button>
+              <a href="https://code.visualstudio.com/">
+                <button id="visitbtn3" class="visitbtn" type="button">
+                  Visit
+                </button>
               </a>
             </li>
           </ul>
           <ul class="second-popular-ul">
-            <li>
-              <img  src="" alt="" />
-              <h5>Notion</h5>
-              <p>Free & Paid</p>
+            <li id="li4" class="first-li2">
+              <img
+                class="popular-logo"
+                src="./images/notion.png"
+                alt="notion-logo"
+              />
+              <h5 id="title4">Notion</h5>
+              <p id="text41">Free & Paid</p>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button">
-                <img src="" alt="" />
+              <p id="text42">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like4()" class="likebtn" type="button">
+                <img
+                  id="like-icon4"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active4"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button type="button">
-                <img src="" alt="" />
+              <button onclick="addToFolder4()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg4"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button type="button">Visit</button>
+              <a href="https://www.notion.so/">
+                <button id="visitbtn4" class="visitbtn" type="button">
+                  Visit
+                </button>
               </a>
             </li>
-            <li>
-              <img src="" alt="" />
-              <h5>Slack</h5>
-              <p>Free & Paid</p>
+            <li id="li5" class="second-li2">
+              <img
+                class="popular-logo"
+                src="./images/grommet-icons_slack.png"
+                alt="slack-logo"
+              />
+              <h5 id="title5">Slack</h5>
+              <p id="text51">Free & Paid</p>
 
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button">
-                <img src="" alt="" />
+              <p id="text52">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like5()" class="likebtn" type="button">
+                <img
+                  id="like-icon5"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active5"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button type="button">
-                <img src="" alt="" />
+              <button onclick="addToFolder5()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg5"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button type="button">Visit</button>
+              <a href="https://slack.com/">
+                <button id="visitbtn5" class="visitbtn" type="button">
+                  Visit
+                </button>
               </a>
             </li>
-            <li>
-              <img src="" alt="" />
-              <h5>Invision</h5>
-              <p>Free & Paid</p>
+            <li id="li6" class="third-li2">
+              <img
+                class="popular-logo"
+                src="./images/logos_invision-icon.png"
+                alt="invision-logo"
+              />
+              <h5 id="title6">Invision</h5>
+              <p id="text61">Free & Paid</p>
 
-              <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit.</p>
-              <button type="button">
-                <img src="" alt="" />
+              <p id="text62">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like6()" class="likebtn" type="button">
+                <img
+                  id="like-icon6"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active6"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
               </button>
-              <button type="button">
-                <img src="" alt="" />
+              <button onclick="addToFolder6()" class="folderbtn" type="button">
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg6"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
               </button>
-              <a href="">
-                <button type="button">Visit</button>
+              <a href="https://www.invisionapp.com/">
+                <button id="visitbtn6" class="visitbtn" type="button">
+                  Visit
+                </button>
               </a>
             </li>
           </ul>
-          <button type="button">Load more</button>
+          <button
+            onmousedown="loadMore1()"
+            onmouseup="loadMore2()"
+            onmouseout="loadMore3()"
+            onmouseover="loadMore4()"
+            id="load-more"
+            class="load-more"
+            type="button"
+          >
+            Load more
+          </button>
         </section>
-        <section>
+        <section class="brand-who-trusted-us">
           <h4>Trusted more than 150+ brand</h4>
-          <img src="" alt="microsoft" />
-          <img src="" alt="google" />
-          <img src="" alt="slack" />
-          <img src="" alt="WordPress" />
+          <a href="https://www.microsoft.com/">
+            <img src="./images/logos_microsoft.png" alt="microsoft" />
+          </a>
+          <a href="https://www.google.com.ua/">
+            <img src="./images/logos_google.png" alt="google" />
+          </a>
+          <a href="https://slack.com/">
+            <img src="./images/logos_slack.png" alt="slack" />
+          </a>
+          <a href="https://uk.wordpress.org/">
+            <img src="./images/logos_wordpress.png" alt="WordPress" />
+          </a>
         </section>
-        <section>
-          <h2>Newcomer Tools</h2>
-          <p>
-            Wow! see the latest update of the most recommended tools from
-            reliable designers and developers
+        <section class="tools">
+          <h2 class="tools-title ttitle">Newcomer Tools</h2>
+          <p class="title-signature ttext">
+            Wow! see the latest update of the most <br />
+            recommended tools from reliable designers <br />
+            and developers
           </p>
-          <button type="button">Explore more</button>
+          <button class="explore-more" type="button">Explore more</button>
 
-          <ul>
-            <li>
-              <img src="" alt="" />
-              <h5>Zeplin</h5>
-              <p>Free & Paid</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button"></button>
-              <button type="button"></button>
+          <ul class="first-tools-ul">
+            <li id="li1-1" class="first-li1-1">
+              <img
+                class="tools-logo"
+                src="./images/zeplin.png"
+                alt="zeplin-logo"
+              />
+              <h5 id="title1-1">Zeplin</h5>
+              <p id="text11-1">Free & Paid</p>
+              <p id="text12-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like11()" class="likebtn d" type="button">
+                <img
+                  id="like-icon1-1"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active1-1"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
+              </button>
+              <button
+                onclick="addToFolder11()"
+                class="folderbtn e"
+                type="button"
+              >
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg1-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
+              </button>
               <a href="">
-                <button type="button">Visit</button>
+                <button
+                  id="visitbtn11"
+                  class="visitbtn visitbtn1 f"
+                  type="button"
+                >
+                  Visit
+                </button>
               </a>
             </li>
-            <li>
-              <img src="" alt="" />
-              <h5>PHPStorm</h5>
-              <p>Free</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button"></button>
-              <button type="button"></button>
+            <li id="li2-1" class="first-li2-1">
+              <img
+                class="tools-logo"
+                src="./images/jb_phpstorm.png"
+                alt="PHPStorm-logo"
+              />
+              <h5 id="title2-1">PHPStorm</h5>
+              <p id="text21-1">Free</p>
+              <p id="text22-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like21()" class="likebtn a" type="button">
+                <img
+                  id="like-icon2-1"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active2-1"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
+              </button>
+              <button
+                onclick="addToFolder21()"
+                class="folderbtn b"
+                type="button"
+              >
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg2-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
+              </button>
               <a href="">
-                <button type="button">Visit</button>
+                <button
+                  id="visitbtn21"
+                  class="visitbtn visitbtn1 c"
+                  type="button"
+                >
+                  Visit
+                </button>
               </a>
             </li>
           </ul>
-          <ul>
-            <li>
-              <img src="" alt="" />
-              <h5>Toolbox</h5>
-              <p>Free</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button"></button>
-              <button type="button"></button>
+          <ul class="second-tools-ul">
+            <li id="li3-1" class="second-li1-1">
+              <img
+                class="tools-logo"
+                src="./images/jb_toolbox_app.png"
+                alt="toolbox-logo"
+              />
+              <h5 id="title3-1">Toolbox</h5>
+              <p id="text31-1">Free</p>
+              <p id="text32-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like31()" class="likebtn j" type="button">
+                <img
+                  id="like-icon3-1"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active3-1"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
+              </button>
+              <button
+                onclick="addToFolder31()"
+                class="folderbtn k"
+                type="button"
+              >
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg3-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
+              </button>
               <a href="">
-                <button type="button">Visit</button>
+                <button id="visitbtn31" class="visitbtn l l1" type="button">
+                  Visit
+                </button>
               </a>
             </li>
-            <li>
-              <img src="" alt="" />
-              <h5>Procreate</h5>
-              <p>Paid</p>
-              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-              <button type="button"></button>
-              <button type="button"></button>
+            <li id="li4-1" class="second-li2-1">
+              <img
+                class="tools-logo"
+                src="./images/procreate.png"
+                alt="procreate.png"
+              />
+              <h5 id="title4-1">Procreate</h5>
+              <p id="text41-1">Paid</p>
+              <p id="text42-1">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+              </p>
+              <button onclick="like41()" class="likebtn g" type="button">
+                <img
+                  id="like-icon4-1"
+                  class="like-icon"
+                  src="./images/like-icon.png"
+                  alt="like-icon"
+                />
+                <img
+                  style="display: none"
+                  id="like-icon-active4-1"
+                  class="like-icon-active"
+                  src="./images/like-icon-active.png"
+                  alt="like-icon-active"
+                />
+              </button>
+              <button
+                onclick="addToFolder41()"
+                class="folderbtn h"
+                type="button"
+              >
+                <svg
+                  class="folderbtn-svg"
+                  id="folderbtn-svg4-1"
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="30"
+                  height="30"
+                  viewBox="0 0 30 30"
+                  fill="none"
+                >
+                  <path
+                    d="M17.5 16.25H16.25V15C16.25 14.6685 16.1183 14.3505 15.8839 14.1161C15.6495 13.8817 15.3315 13.75 15 13.75C14.6685 13.75 14.3505 13.8817 14.1161 14.1161C13.8817 14.3505 13.75 14.6685 13.75 15V16.25H12.5C12.1685 16.25 11.8505 16.3817 11.6161 16.6161C11.3817 16.8505 11.25 17.1685 11.25 17.5C11.25 17.8315 11.3817 18.1495 11.6161 18.3839C11.8505 18.6183 12.1685 18.75 12.5 18.75H13.75V20C13.75 20.3315 13.8817 20.6495 14.1161 20.8839C14.3505 21.1183 14.6685 21.25 15 21.25C15.3315 21.25 15.6495 21.1183 15.8839 20.8839C16.1183 20.6495 16.25 20.3315 16.25 20V18.75H17.5C17.8315 18.75 18.1495 18.6183 18.3839 18.3839C18.6183 18.1495 18.75 17.8315 18.75 17.5C18.75 17.1685 18.6183 16.8505 18.3839 16.6161C18.1495 16.3817 17.8315 16.25 17.5 16.25Z"
+                    fill-opacity="0.78"
+                  />
+                  <path
+                    d="M24.375 8.81249H15.625L12.3375 4.83749C12.2212 4.6941 12.0745 4.57825 11.9081 4.49829C11.7417 4.41832 11.5596 4.37621 11.375 4.37499H5.625C4.80826 4.36496 4.02083 4.67898 3.43512 5.24829C2.84942 5.8176 2.51317 6.59579 2.5 7.41249V22.5875C2.51317 23.4042 2.84942 24.1824 3.43512 24.7517C4.02083 25.321 4.80826 25.635 5.625 25.625H24.375C25.1917 25.635 25.9792 25.321 26.5649 24.7517C27.1506 24.1824 27.4868 23.4042 27.5 22.5875V11.85C27.4868 11.0333 27.1506 10.2551 26.5649 9.68579C25.9792 9.11648 25.1917 8.80246 24.375 8.81249ZM25 22.5625C24.9953 22.6392 24.9753 22.7142 24.9411 22.783C24.9069 22.8518 24.8593 22.9131 24.801 22.9632C24.7427 23.0133 24.675 23.0512 24.6019 23.0747C24.5287 23.0982 24.4515 23.1068 24.375 23.1H5.625C5.54846 23.1068 5.47132 23.0982 5.39815 23.0747C5.32498 23.0512 5.25726 23.0133 5.199 22.9632C5.14073 22.9131 5.0931 22.8518 5.05892 22.783C5.02474 22.7142 5.00471 22.6392 5 22.5625V7.41249C5.00471 7.33578 5.02474 7.2608 5.05892 7.19197C5.0931 7.12315 5.14073 7.06187 5.199 7.01176C5.25726 6.96165 5.32498 6.92373 5.39815 6.90024C5.47132 6.87675 5.54846 6.86816 5.625 6.87499H10.7875L14.0375 10.85C14.1538 10.9934 14.3005 11.1092 14.4669 11.1892C14.6333 11.2692 14.8154 11.3113 15 11.3125H24.375C24.4515 11.3057 24.5287 11.3142 24.6019 11.3377C24.675 11.3612 24.7427 11.3992 24.801 11.4493C24.8593 11.4994 24.9069 11.5606 24.9411 11.6295C24.9753 11.6983 24.9953 11.7733 25 11.85V22.5625Z"
+                    fill-opacity="0.78"
+                  />
+                </svg>
+              </button>
               <a href="">
-                <button type="button">Visit</button>
+                <button id="visitbtn41" class="visitbtn i i1" type="button">
+                  Visit
+                </button>
               </a>
             </li>
           </ul>
         </section>
-        <section>
-          <button disabled="disabled"></button>
-          <div>
-            <img src="" alt="man" />
-            <h3>Ronald Richards</h3>
-            <p>Product Manager</p>
-            <p>“</p>
-            <p>
-              Incididunt cillum do sint sint enim ullamco id deserunt mollit qui
-              reprehenderit do. Velit ex tempor cillum ad sint occaecat. Do
-              nulla velit labore occaecat do deserunt Lorem magna officia
-              incididunt consectetur amet. Sunt consectetur veniam minim ex
-              commodo sint non. Occaecat aute officia excepteur non laboris id
-              qui ad.
-            </p>
+        <section class="swiperS">
+          <div class="swiper">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <img class="swiper-man" src="./images/man.png" alt="man" />
+                <div class="blurbg">
+                  <h3 class="swiper-man-name">Ronald Richards</h3>
+                  <p class="swiper-man-profession">Product Manager</p>
+                </div>
+                <img class="decor" src="./images/“.png" alt="''">
+                <p class="man-dscr">
+                  Incididunt cillum do sint sint enim ullamco id deserunt mollit <br> qui
+                  reprehenderit do. Velit ex tempor cillum ad sint occaecat. <br> Do
+                  nulla velit labore occaecat do deserunt Lorem magna <br> officia
+                  incididunt consectetur amet. Sunt consectetur veniam <br> minim ex
+                  commodo sint non. Occaecat aute officia excepteur <br> non laboris id
+                  qui ad.
+                </p>
+              </div>
+              <div class="swiper-slide">
+                <h2 class="your-title">You can add your resume</h2>
+                <h3 class="your-photo">Your photo</h3>
+                <div class="blurbg m">
+                  <h3 class="your-name">Your name</h3>
+                  <p class="your-profession">Your profession</p>
+                </div>
+                <img class="decor1" src="./images/“.png" alt="''">
+                <p class="descr">Your describtion</p>
+                <button class="add-resume" type="button">Add resume</button>
+              </div>
+            </div>
+            <div class="swiper-button-prev"></div>
+            <div class="swiper-button-next"></div>
+
+            <div class="swiper-scrollbar"></div>
           </div>
-          <button type="button"></button>
-          <ul>
-            <li><div></div></li>
-            <li><div></div></li>
-          </ul>
         </section>
-        <section>
-          <h2>Become a contributor?</h2>
-          <p>
+        <section class="contributor">
+          <h2 class="contributor-title ttitle">Become a contributor?</h2>
+          <p class="contributor-signature ttext">
             Join us and get tips & tricks to become a great Designer and
             Developer
           </p>
-          <input
-            type="email"
-            name="email"
-            id="email"
-            placeholder="Enter your email..."
-          />
-          <button type="button">Join Us</button>
+          <div class="box-email">
+            <input class="contributor-email"
+              type="email"
+              name="email"
+              id="email"
+              placeholder="Enter your email..."
+            />
+            <button class="join-us" type="button">Join Us</button>
+          </div>
         </section>
       </main>
       <footer>
@@ -301,6 +757,7 @@
         </section>
       </footer>
     </div>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>
 </html>
