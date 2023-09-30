@@ -13,9 +13,89 @@
   </head>
   <body>
     <div class="container">
+      <div
+        style="display: block; position: absolute"
+        id="scroll-top-object"
+      ></div>
+
+      <div id="login-popup" class="login-popup">
+        <a
+          href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D2&ec=GAZAmgQ&hl=ru&passive=true&ifkv=AYZoVhdfUDZiv8Uxr8dScsg7RLhVzL63Vx1ujWV6PLmALviGakZ9xUrx8MmMLZLrTmgB7ejf8B5rwQ&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+        >
+          <button class="login-with login-with-google" type="button">
+            <img
+              src="./images/google-icon.png"
+              alt="google logo"
+              width="24px"
+              height="24px"
+            />
+            Login with Google
+          </button>
+        </a>
+        <a href="https://appleid.apple.com/sign-in">
+          <button class="login-with login-with-apple" type="button">
+            <img
+              src="./images/apple-icon.png"
+              alt="apple logo"
+              width="24px"
+              height="24px"
+            />
+            Login with apple
+          </button>
+        </a>
+        <div class="login-popup-line1"></div>
+        <div class="login-popup-or">or</div>
+        <div class="login-popup-line2"></div>
+        <label class="login-popup-label-nickname" for="login-nickname"
+          >Nickname*</label
+        ><br />
+        <input
+        required
+          class="login-popup-input-nickname"
+          type="text"
+          name="login-nickname"
+          id="login-nickname"
+          placeholder="John Doe"
+        /><br />
+        <label class="login-popup-label-password" for="login-password"
+          >Password*</label
+        ><br />
+        <input
+        required
+          minlength="8"
+          class="login-popup-input-password"
+          type="password"
+          name="login-password"
+          id="login-password"
+          placeholder="********"
+        />
+        <br />
+        <img
+          style="cursor: pointer"
+          id="visibility-off"
+          class="visibility-off"
+          src="./images/outline_visibility_off_black_24dp.png"
+          alt="visibility off button"
+        />
+        <img
+          style="cursor: pointer"
+          id="visibility-on"
+          class="visibility-on"
+          src="./images/outline_visibility_black_24dp.png"
+          alt="visibility on button"
+        />
+        <button class="login-btn" type="submit">Login</button>
+      </div>
+
       <header>
         <img class="logo" src="./images/website-logo.png" alt="Website logo" />
         <p class="sites-name">antools.</p>
+        <button id="back-top-btn" class="back-top-btn" type="button">
+          <img
+            src="./images/outline_keyboard_double_arrow_up_white_24dp.png"
+            alt=""
+          />
+        </button>
 
         <nav class="navigate">
           <ul>
@@ -26,7 +106,17 @@
           </ul>
         </nav>
 
-        <button class="login" type="button">Login</button>
+        <button
+          onmousedown="loadMore1_1()"
+          onmouseup="loadMore2_1()"
+          onmouseout="loadMore3_1()"
+          onmouseover="loadMore4_1()"
+          id="login"
+          class="login"
+          type="button"
+        >
+          Login
+        </button>
         <button class="sign-up" type="button">Sign Up</button>
 
         <h1>
@@ -63,7 +153,7 @@
         <img class="many-svg" src="./images/Illustration.png" alt="" />
       </header>
       <main>
-        <section class="popular">
+        <section id="design" class="popular">
           <h2 class="popular-title ttitle">Most Popular Tools</h2>
           <p class="popular-signature ttext">
             Tools for the best Designers and Developers <br />
@@ -427,7 +517,7 @@
             <img src="./images/logos_wordpress.png" alt="WordPress" />
           </a>
         </section>
-        <section class="tools">
+        <section id="development" class="tools">
           <h2 class="tools-title ttitle">Newcomer Tools</h2>
           <p class="title-signature ttext">
             Wow! see the latest update of the most <br />
@@ -682,14 +772,18 @@
                   <h3 class="swiper-man-name">Ronald Richards</h3>
                   <p class="swiper-man-profession">Product Manager</p>
                 </div>
-                <img class="decor" src="./images/“.png" alt="''">
+                <img class="decor" src="./images/“.png" alt="''" />
                 <p class="man-dscr">
-                  Incididunt cillum do sint sint enim ullamco id deserunt mollit <br> qui
-                  reprehenderit do. Velit ex tempor cillum ad sint occaecat. <br> Do
-                  nulla velit labore occaecat do deserunt Lorem magna <br> officia
-                  incididunt consectetur amet. Sunt consectetur veniam <br> minim ex
-                  commodo sint non. Occaecat aute officia excepteur <br> non laboris id
-                  qui ad.
+                  Incididunt cillum do sint sint enim ullamco id deserunt mollit
+                  <br />
+                  qui reprehenderit do. Velit ex tempor cillum ad sint occaecat.
+                  <br />
+                  Do nulla velit labore occaecat do deserunt Lorem magna <br />
+                  officia incididunt consectetur amet. Sunt consectetur veniam
+                  <br />
+                  minim ex commodo sint non. Occaecat aute officia excepteur
+                  <br />
+                  non laboris id qui ad.
                 </p>
               </div>
               <div class="swiper-slide">
@@ -699,7 +793,7 @@
                   <h3 class="your-name">Your name</h3>
                   <p class="your-profession">Your profession</p>
                 </div>
-                <img class="decor1" src="./images/“.png" alt="''">
+                <img class="decor1" src="./images/“.png" alt="''" />
                 <p class="descr">Your describtion</p>
                 <button class="add-resume" type="button">Add resume</button>
               </div>
@@ -717,7 +811,8 @@
             Developer
           </p>
           <div class="box-email">
-            <input class="contributor-email"
+            <input
+              class="contributor-email"
               type="email"
               name="email"
               id="email"
@@ -727,36 +822,35 @@
           </div>
         </section>
       </main>
-      <footer>
-        <div></div>
-        <section>
-          <img src="" alt="Website logo" />
-          <p>antools.</p>
-          <p>Copyright 2021. Antools</p>
-          <p>
-            Antool is a web collection of information on paid or free Design and
-            Development tools
-          </p>
-        </section>
-        <section>
-          <p>Contact us</p>
-          <a href="tel:+621987463">+621987463</a>
-          <a href="№">M Bulding, No.10 A</a>
-          <a href="mailto:antools@awesome.com">antools@awesome.com</a>
-        </section>
-        <section>
-          <p>Categories</p>
-          <p>Design</p>
-          <p>Development</p>
-        </section>
-        <section>
-          <p>Company info</p>
-          <p>About us</p>
-          <p>Our Partners</p>
-          <p>Blog</p>
-        </section>
+      <div class="footer-line"></div>
+      <footer class="copyright">
+        <img src="./images/website-logo.png" alt="Website logo" />
+        <p class="sites-name footer-logo">antools.</p>
+        <h5>Copyright 2021. Antools</h5>
+        <p>
+          Antool is a web collection of information on paid or free Design and
+          Development tools
+        </p>
+      </footer>
+      <footer class="contact-us">
+        <h5>Contact us</h5>
+        <a href="tel:+621987463">+621987463</a> <br />
+        <a href="№">M Bulding, No.10 A</a>
+        <a href="mailto:antools@awesome.com">antools@awesome.com</a>
+      </footer>
+      <footer id="categories" class="categories">
+        <h5>Categories</h5>
+        <a id="design-href">Design</a>
+        <a id="development-href">Development</a>
+      </footer>
+      <footer class="company-info">
+        <h5>Company info</h5>
+        <p>About us</p>
+        <p>Our Partners</p>
+        <p>Blog</p>
       </footer>
     </div>
+    <div onclick="closePopup()" id="blur-bg" class="blur-bg"></div>
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
     <script src="./js/index.js"></script>
   </body>

@@ -1,3 +1,24 @@
+window.onscroll = function () {
+  scrollFunction();
+};
+
+function scrollFunction() {
+  if (
+    document.body.scrollTop > 700 ||
+    document.documentElement.scrollTop > 700
+  ) {
+    document.getElementById("back-top-btn").style.display = "block";
+  } else {
+    document.getElementById("back-top-btn").style.display = "none";
+  }
+}
+function scrollTop() {
+  document
+    .getElementById("scroll-top-object")
+    .scrollIntoView({ behavior: "smooth" }, 1500);
+}
+document.getElementById("back-top-btn").addEventListener("click", scrollTop);
+
 var li1 = document.getElementById("li1");
 
 li1.addEventListener("mouseover", (event) => {
@@ -452,33 +473,138 @@ function loadMore1() {
 function loadMore2() {
   document.getElementById("load-more").style.backgroundColor = "#1e252b";
   document.getElementById("load-more").style.color = "#FF6E30";
-  document.getElementById('load-more').style.border = '2px solid #FF6E30'
+  document.getElementById("load-more").style.border = "2px solid #FF6E30";
 }
 function loadMore3() {
-  document.getElementById('load-more').style.border = '1px solid rgba(255, 255, 255, 0.1)'
+  document.getElementById("load-more").style.border =
+    "1px solid rgba(255, 255, 255, 0.1)";
 }
 function loadMore4() {
-  document.getElementById('load-more').style.border = '2px solid #FF6E30'
+  document.getElementById("load-more").style.border = "2px solid #FF6E30";
+}
+function loadMore1_1() {
+  document.getElementById("login").style.backgroundColor = "#FF6E30";
+  document.getElementById("login").style.color = "white";
+}
+function loadMore2_1() {
+  document.getElementById("login").style.backgroundColor = "#1e252b";
+  document.getElementById("login").style.color = "white";
+  document.getElementById("login").style.border = "2px solid #FF6E30";
+}
+function loadMore3_1() {
+  document.getElementById("login").style.border =
+    "1px solid rgba(255, 255, 255, 0.1)";
+}
+function loadMore4_1() {
+  document.getElementById("login").style.border = "2px solid #FF6E30";
 }
 
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper(".swiper", {
   // Optional parameters
   loop: true,
 
   // Navigation arrows
   navigation: {
-    nextEl: '.swiper-button-next',
-    prevEl: '.swiper-button-prev',
+    nextEl: ".swiper-button-next",
+    prevEl: ".swiper-button-prev",
   },
 
   // And if we need scrollbar
   scrollbar: {
-    el: '.swiper-scrollbar',
+    el: ".swiper-scrollbar",
   },
 });
-new Swiper('.swiper',{
+new Swiper(".swiper", {
   navigation: {
-          nextEl: '.custom-next',
-          prevEl: '.custom-prev',
+    nextEl: ".custom-next",
+    prevEl: ".custom-prev",
   },
+});
+
+var scrollhref1 = document.getElementById("design-href");
+var scrollhref2 = document.getElementById("development-href");
+var scrollObject1 = document.getElementById("design");
+var scrollObject2 = document.getElementById("development");
+
+function scroll1() {
+  scrollObject1.scrollIntoView({ behavior: "smooth" }, 1500);
+}
+function scroll2() {
+  scrollObject2.scrollIntoView({ behavior: "smooth" }, 1500);
+}
+scrollhref1.addEventListener("click", scroll1);
+scrollhref2.addEventListener("click", scroll2);
+
+function showPassword() {
+  var x = document.getElementById("login-password");
+  if (x.type === "password") {
+    x.type = "text";
+    document.getElementById("visibility-off").style.display = "none";
+    document.getElementById("visibility-on").style.display = "block";
+  } else {
+    x.type = "password";
+    document.getElementById("visibility-off").style.display = "block";
+    document.getElementById("visibility-on").style.display = "none";
+  }
+}
+function hidePassword() {
+  var x = document.getElementById("login-password");
+  if (x.type === "text") {
+    x.type = "password";
+    document.getElementById("visibility-off").style.display = "block";
+    document.getElementById("visibility-on").style.display = "none";
+  } else {
+    x.type = "text";
+    document.getElementById("visibility-off").style.display = "none";
+    document.getElementById("visibility-on").style.display = "block";
+  }
+}
+document
+  .getElementById("visibility-off")
+  .addEventListener("click", showPassword);
+document
+  .getElementById("visibility-on")
+  .addEventListener("click", hidePassword);
+var loginBtn = document.getElementById("login");
+var closeLoginPopupBtn = document.getElementById("closebtn1");
+// var blurbg = document.getElementById("blur-bg");
+
+function showPopup() {
+  let elem = document.getElementById("login-popup");
+  let style = getComputedStyle(elem);
+  if (style.display === "none") {
+    document.getElementById("login-popup").style.display = "block";
+  } else if (style.display !== "none") {
+    document.getElementById("login-popup").style.disply = "none";
+  }
+
+  if (style.display === "block") {
+    document.getElementById("blur-bg").style.display = "block";
+    document.body.style.overflowY = "hidden";
+  } else if (style.display !== "block") {
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
+  }
+}
+
+function closePopup() {
+  let elem = document.getElementById("login-popup");
+  let style = getComputedStyle(elem);
+  if (style.display === "block") {
+    document.getElementById("login-popup").style.display = "none";
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
+  } else if (style.display !== "block") {
+    document.getElementById("login-popup").style.display = "block";
+    document.getElementById("blur-bg").style.display = "block";
+    document.body.style.overflowY = "hidden";
+  }
+}
+loginBtn.addEventListener("click", showPopup);
+closeLoginPopupBtn.addEventListener("click", closePopup);
+// blurbg.addEventListener("click", closePopup);
+document.addEventListener("keydown", function (e) {
+  if (e.key === "Escape") {
+    closePopup();
+  }
 });
