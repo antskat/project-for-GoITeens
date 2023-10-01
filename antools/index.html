@@ -19,6 +19,8 @@
       ></div>
 
       <div id="login-popup" class="login-popup">
+        <div id="circlebg1" class="circlebg1"></div>
+        <div id="closebtn1" class="closeLoginPopupBtn"></div>
         <a
           href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D2&ec=GAZAmgQ&hl=ru&passive=true&ifkv=AYZoVhdfUDZiv8Uxr8dScsg7RLhVzL63Vx1ujWV6PLmALviGakZ9xUrx8MmMLZLrTmgB7ejf8B5rwQ&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
         >
@@ -50,7 +52,7 @@
           >Nickname*</label
         ><br />
         <input
-        required
+          required
           class="login-popup-input-nickname"
           type="text"
           name="login-nickname"
@@ -61,7 +63,7 @@
           >Password*</label
         ><br />
         <input
-        required
+          required
           minlength="8"
           class="login-popup-input-password"
           type="password"
@@ -72,19 +74,102 @@
         <br />
         <img
           style="cursor: pointer"
-          id="visibility-off"
+          id="visibility-off1"
           class="visibility-off"
           src="./images/outline_visibility_off_black_24dp.png"
           alt="visibility off button"
         />
         <img
           style="cursor: pointer"
-          id="visibility-on"
+          id="visibility-on1"
           class="visibility-on"
           src="./images/outline_visibility_black_24dp.png"
           alt="visibility on button"
         />
-        <button class="login-btn" type="submit">Login</button>
+        <button onclick="closePopup1()" class="login-btn" type="submit">Login</button>
+        <p class="or-register">or if you don`t <br> have account <a style="cursor: pointer;" onclick="changePopup2()">Sign up</a></p>
+      </div>
+
+      <div id="register-popup" class="register-popup">
+        <div id="circlebg1" class="circlebg1"></div>
+        <div id="closebtn2" class="closeLoginPopupBtn"></div>
+        <a
+          href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D2&ec=GAZAmgQ&hl=ru&passive=true&ifkv=AYZoVhdfUDZiv8Uxr8dScsg7RLhVzL63Vx1ujWV6PLmALviGakZ9xUrx8MmMLZLrTmgB7ejf8B5rwQ&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
+        >
+          <button class="login-with " type="button">
+            <img
+              src="./images/google-icon.png"
+              alt="google logo"
+              width="24px"
+              height="24px"
+            />
+            Sign up with Google
+          </button>
+        </a>
+        <a href="https://appleid.apple.com/sign-in">
+          <button class="login-with register-with-apple " type="button">
+            <img
+              src="./images/apple-icon.png"
+              alt="apple logo"
+              width="24px"
+              height="24px"
+            />
+            Sign up with apple
+          </button>
+        </a>
+        <div class="register-popup-line1 "></div>
+        <div class="register-popup-or ">or</div>
+        <div class="register-popup-line2 "></div>
+        <label class="register-popup-label-nickname " for="login-nickname"
+          >Nickname*</label
+        ><br />
+        <input
+          required
+          class="register-popup-input-nickname "
+          type="text"
+          name="login-nickname"
+          id="login-nickname"
+          placeholder="John Doe"
+        /><br />
+        <label class="register-popup-label-email" for="login-email">Email*</label> <br />
+        <input
+          required
+          type="text"
+          class="register-popup-input-email"
+          name="login-email"
+          id="login-email"
+          placeholder="example@gmail.com"
+        />
+        <br />
+        <label class="register-popup-label-password " for="login-password"
+          >Password*</label
+        ><br />
+        <input
+          required
+          minlength="8"
+          class="register-popup-input-password "
+          type="password"
+          name="login-password"
+          id="register-password"
+          placeholder="********"
+        />
+        <br />
+        <img
+          style="cursor: pointer"
+          id="visibility-off"
+          class="visibility-off register"
+          src="./images/outline_visibility_off_black_24dp.png"
+          alt="visibility off button"
+        />
+        <img
+          style="cursor: pointer"
+          id="visibility-on"
+          class="visibility-on register"
+          src="./images/outline_visibility_black_24dp.png"
+          alt="visibility on button"
+        />
+        <button onclick="closePopup2()" class="register-btn " type="submit">Sign up</button>
+        <p class="or-login">or if you already <br> have account <a style="cursor: pointer;" onclick="changePopup1()">Login</a></p>
       </div>
 
       <header>
@@ -117,7 +202,7 @@
         >
           Login
         </button>
-        <button class="sign-up" type="button">Sign Up</button>
+        <button id="sign-up" class="sign-up" type="button">Sign Up</button>
 
         <h1>
           Awesome tools for <br />
@@ -787,6 +872,18 @@
                 </p>
               </div>
               <div class="swiper-slide">
+
+                <div id="resume-popup" class="resume-popup">
+                  <label for="upload-image">Upload your photo</label><br>
+                  <input type="file" name="upload-image" id="upload-image"><br>
+                  <label for="your-name">Write your real name</label><br>
+                  <input type="text" name="your-name" id="your-name" placeholder="John Doe"><br>
+                  <label for="your-profession">Write your profession</label><br>
+                  <input type="text" name="yout-profession" id="your-profession"><br>
+                  <h4>Wrtie your describtion</h4>
+                  <textarea name="your-descr" id="your-descr" cols="30" rows="28"></textarea>
+                </div>
+
                 <h2 class="your-title">You can add your resume</h2>
                 <h3 class="your-photo">Your photo</h3>
                 <div class="blurbg m">

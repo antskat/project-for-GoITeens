@@ -535,7 +535,7 @@ function scroll2() {
 scrollhref1.addEventListener("click", scroll1);
 scrollhref2.addEventListener("click", scroll2);
 
-function showPassword() {
+function showPassword1() {
   var x = document.getElementById("login-password");
   if (x.type === "password") {
     x.type = "text";
@@ -547,7 +547,7 @@ function showPassword() {
     document.getElementById("visibility-on").style.display = "none";
   }
 }
-function hidePassword() {
+function hidePassword1() {
   var x = document.getElementById("login-password");
   if (x.type === "text") {
     x.type = "password";
@@ -561,15 +561,48 @@ function hidePassword() {
 }
 document
   .getElementById("visibility-off")
-  .addEventListener("click", showPassword);
+  .addEventListener("click", showPassword1);
 document
   .getElementById("visibility-on")
-  .addEventListener("click", hidePassword);
-var loginBtn = document.getElementById("login");
-var closeLoginPopupBtn = document.getElementById("closebtn1");
-// var blurbg = document.getElementById("blur-bg");
+  .addEventListener("click", hidePassword1);
 
-function showPopup() {
+  function showPassword2() {
+    var x = document.getElementById("register-password");
+    if (x.type === "password") {
+      x.type = "text";
+      document.getElementById("visibility-off").style.display = "none";
+      document.getElementById("visibility-on").style.display = "block";
+    } else {
+      x.type = "password";
+      document.getElementById("visibility-off").style.display = "block";
+      document.getElementById("visibility-on").style.display = "none";
+    }
+  }
+  function hidePassword2() {
+    var x = document.getElementById("register-password");
+    if (x.type === "text") {
+      x.type = "password";
+      document.getElementById("visibility-off").style.display = "block";
+      document.getElementById("visibility-on").style.display = "none";
+    } else {
+      x.type = "text";
+      document.getElementById("visibility-off").style.display = "none";
+      document.getElementById("visibility-on").style.display = "block";
+    }
+  }
+  document
+    .getElementById("visibility-off")
+    .addEventListener("click", showPassword2);
+  document
+    .getElementById("visibility-on")
+    .addEventListener("click", hidePassword2);
+var loginBtn = document.getElementById("login");
+var signUpBtn = document.getElementById("sign-up");
+var closeLoginPopupBtn = document.getElementById("closebtn1");
+var closeRegisterPopupBtn = document.getElementById("closebtn2");
+var blurbg = document.getElementById("blur-bg");
+
+function showPopup1() {
   let elem = document.getElementById("login-popup");
   let style = getComputedStyle(elem);
   if (style.display === "none") {
@@ -587,7 +620,7 @@ function showPopup() {
   }
 }
 
-function closePopup() {
+function closePopup1() {
   let elem = document.getElementById("login-popup");
   let style = getComputedStyle(elem);
   if (style.display === "block") {
@@ -595,16 +628,69 @@ function closePopup() {
     document.getElementById("blur-bg").style.display = "none";
     document.body.style.overflowY = "scroll";
   } else if (style.display !== "block") {
-    document.getElementById("login-popup").style.display = "block";
-    document.getElementById("blur-bg").style.display = "block";
-    document.body.style.overflowY = "hidden";
+    document.getElementById("login-popup").style.display = "none";
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
   }
 }
-loginBtn.addEventListener("click", showPopup);
-closeLoginPopupBtn.addEventListener("click", closePopup);
-// blurbg.addEventListener("click", closePopup);
-document.addEventListener("keydown", function (e) {
-  if (e.key === "Escape") {
-    closePopup();
+function showPopup2() {
+  let elem = document.getElementById("register-popup");
+  let style = getComputedStyle(elem);
+  if (style.display === "none") {
+    document.getElementById("register-popup").style.display = "block";
+  } else if (style.display !== "none") {
+    document.getElementById("register-popup").style.disply = "none";
+  }
+
+  if (style.display === "block") {
+    document.getElementById("blur-bg").style.display = "block";
+    document.body.style.overflowY = "hidden";
+  } else if (style.display !== "block") {
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
+  }
+}
+
+function closePopup2() {
+  let elem = document.getElementById("register-popup");
+  let style = getComputedStyle(elem);
+  if (style.display === "block") {
+    document.getElementById("register-popup").style.display = "none";
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
+  } else if (style.display !== "block") {
+    document.getElementById("register-popup").style.display = "none";
+    document.getElementById("blur-bg").style.display = "none";
+    document.body.style.overflowY = "scroll";
+  }
+}
+function hoverCloseBtn() {
+  document.getElementById('circlebg1').style.display = 'block'
+}
+function hoverCloseBtnn() {
+  document.getElementById('circlebg1').style.display = 'none'
+}
+function changePopup1() {
+  document.getElementById('login-popup').style.display = 'block';
+  document.getElementById('register-popup').style.display = 'none';
+}
+function changePopup2() {
+  document.getElementById('login-popup').style.display = 'none';
+  document.getElementById('register-popup').style.display = 'block';
+}
+signUpBtn.addEventListener('click', showPopup2);
+loginBtn.addEventListener("click", showPopup1);
+closeLoginPopupBtn.addEventListener("click", closePopup1);
+closeLoginPopupBtn.addEventListener('mouseover', hoverCloseBtn);
+closeLoginPopupBtn.addEventListener('mouseout', hoverCloseBtnn);
+closeRegisterPopupBtn.addEventListener("click", closePopup2);
+closeRegisterPopupBtn.addEventListener('mouseover', hoverCloseBtn);
+closeRegisterPopupBtn.addEventListener('mouseout', hoverCloseBtnn);
+blurbg.addEventListener("click", closePopup1);
+blurbg.addEventListener("click", closePopup2);
+document.addEventListener("keydown", function (event) {
+  if (event.key === "Escape") {
+    closePopup1();
+    closePopup2();
   }
 });

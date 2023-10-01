@@ -46,7 +46,8 @@ body {
   overflow-x: hidden;
 }
 
-.login-popup {
+.login-popup,
+.register-popup {
   display: none;
   position: relative;
   background: radial-gradient(
@@ -64,6 +65,42 @@ body {
   z-index: 9999;
   margin-top: 150px;
   left: 700px;
+}
+.closeLoginPopupBtn {
+  position: absolute;
+  top: 20px;
+  left: 370px;
+  width: 25px;
+  height: 25px;
+  --weight: 3px;
+  --aa: 1px; /* anti-aliasing */
+  --color: black;
+  border-radius: 3px;
+  background: linear-gradient(
+      45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    ),
+    linear-gradient(
+      -45deg,
+      transparent calc(50% - var(--weight) - var(--aa)),
+      var(--color) calc(50% - var(--weight)),
+      var(--color) calc(50% + var(--weight)),
+      transparent calc(50% + var(--weight) + var(--aa))
+    );
+  cursor: pointer;
+}
+.circlebg1{
+  display: none;
+  position: absolute;
+  top: 7px;
+  left: 356.5px;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.2);
 }
 .login-with {
   position: relative;
@@ -84,10 +121,12 @@ body {
   font-family: Poppins;
   font-weight: 500;
 }
-.login-with-apple {
+.login-with-apple,
+.register-with-apple {
   margin-top: 16px;
 }
-.login-popup-line1 {
+.login-popup-line1,
+.register-popup-line1 {
   width: 119.5px;
   gap: 10px;
   height: 1px;
@@ -95,13 +134,15 @@ body {
   margin-top: 33px;
   margin-left: 22px;
 }
-.login-popup-or {
+.login-popup-or,
+.register-popup-or {
   position: relative;
   left: 153px;
   top: -14px;
   color: #bcccdc;
 }
-.login-popup-line2 {
+.login-popup-line2,
+.register-popup-line2 {
   position: relative;
   width: 119.5px;
   gap: 10px;
@@ -113,23 +154,36 @@ body {
 .login-popup-label-nickname,
 .login-popup-input-nickname,
 .login-popup-label-password,
-.login-popup-input-password {
+.login-popup-input-password,
+.register-popup-label-nickname,
+.register-popup-input-nickname,
+.register-popup-label-email,
+.register-popup-input-email,
+.register-popup-label-password,
+.register-popup-input-password {
   position: relative;
   left: 20px;
 }
-.login-popup-input-password {
+.login-popup-input-password,
+.register-popup-input-password {
   position: relative;
   top: 0px;
 }
 .login-popup-input-password,
-.login-popup-input-nickname {
+.login-popup-input-nickname,
+.register-popup-input-password,
+.register-popup-input-nickname,
+.register-popup-input-email  {
   padding: 8px;
   border-radius: 8px;
   border: none;
   width: 281px;
 }
 .login-popup-input-password::placeholder,
-.login-popup-input-nickname::placeholder {
+.login-popup-input-nickname::placeholder,
+.register-popup-input-password::placeholder,
+.register-popup-input-nickname::placeholder,
+.register-popup-input-email::placeholder {
   font-family: Poppins;
   font-weight: 500;
   text-align: start;
@@ -145,7 +199,8 @@ body {
   left: 285px;
   top: -27px;
 }
-.login-btn {
+.login-btn,
+.register-btn {
   position: absolute;
   top: 380px;
   left: 157px;
@@ -161,12 +216,47 @@ body {
   text-align: center;
   cursor: pointer;
 }
+.login-btn {
+  left: 90px;
+}
 .login-btn:hover,
-.login-btn:focus {
+.login-btn:focus,
+.register-btn:hover,
+.register-btn:focus {
   border: 2px solid var(--accent-color);
 }
-.login-btn:active {
+.login-btn:active,
+.register-btn:active {
   background: var(--accent-color);
+}
+.register-popup-input-email,
+.register-popup-label-email,
+.register-popup-input-nickname,
+.register-popup-label-nickname,
+.register-popup-input-password,
+.register-popup-label-password {
+  top: -20px;
+}
+
+.register-popup {
+  display: none;
+}
+.register-btn {
+  top: 401px;
+  left: 78px;
+}
+.register {
+  top: -46px;
+}
+.or-login {
+  position: absolute;
+  top: 383px;
+  left: 208px;
+}
+.or-register {
+  position: relative;
+  top: -20px;
+  left: 170px;
 }
 /* хедер */
 .logo {
@@ -287,6 +377,7 @@ h1 > span {
   background: var(--accent-color);
 
   color: #fff;
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -653,6 +744,7 @@ h1 > span {
   background-color: #1e252b;
 
   color: rgba(255, 255, 255, 0.55);
+  font-family: inherit;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
@@ -715,6 +807,7 @@ h1 > span {
   margin-top: 100px;
 
   color: #ff6e30;
+  font-family: inherit;
   font-size: 20px;
   font-style: normal;
   font-weight: 500;
@@ -781,6 +874,7 @@ h1 > span {
   border-radius: 8px;
   background: #ff6e30;
   color: #fff;
+  font-family: inherit;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
@@ -871,6 +965,15 @@ h1 > span {
   line-height: 30px;
   letter-spacing: 0.21px;
   transform: translate(700px, -600px);
+}
+
+.resume-popup {
+  width: 800px;
+  height: 400px;
+  background: radial-gradient(
+    var(--accent-color) 0%,
+    rgba(36, 44, 49, 1) 175%
+  );;
 }
 
 .your-title {
