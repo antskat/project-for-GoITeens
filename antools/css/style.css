@@ -55,6 +55,7 @@ body {
     var(--accent-color) 0%,
     rgba(36, 44, 49, 1) 125%
   );
+  transition: 0.3s;
   width: 329px;
   height: 343px;
   padding: 60px 48px;
@@ -91,6 +92,7 @@ body {
       transparent calc(50% + var(--weight) + var(--aa))
     );
   cursor: pointer;
+  transition: all 0.3s;
 }
 .circlebg1{
   display: none;
