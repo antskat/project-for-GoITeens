@@ -539,31 +539,31 @@ function showPassword1() {
   var x = document.getElementById("login-password");
   if (x.type === "password") {
     x.type = "text";
-    document.getElementById("visibility-off").style.display = "none";
-    document.getElementById("visibility-on").style.display = "block";
+    document.getElementById("visibility-off1").style.display = "none";
+    document.getElementById("visibility-on1").style.display = "block";
   } else {
     x.type = "password";
-    document.getElementById("visibility-off").style.display = "block";
-    document.getElementById("visibility-on").style.display = "none";
+    document.getElementById("visibility-off1").style.display = "block";
+    document.getElementById("visibility-on1").style.display = "none";
   }
 }
 function hidePassword1() {
   var x = document.getElementById("login-password");
   if (x.type === "text") {
     x.type = "password";
-    document.getElementById("visibility-off").style.display = "block";
-    document.getElementById("visibility-on").style.display = "none";
+    document.getElementById("visibility-off1").style.display = "block";
+    document.getElementById("visibility-on1").style.display = "none";
   } else {
     x.type = "text";
-    document.getElementById("visibility-off").style.display = "none";
-    document.getElementById("visibility-on").style.display = "block";
+    document.getElementById("visibility-off1").style.display = "none";
+    document.getElementById("visibility-on1").style.display = "block";
   }
 }
 document
-  .getElementById("visibility-off")
+  .getElementById("visibility-off1")
   .addEventListener("click", showPassword1);
 document
-  .getElementById("visibility-on")
+  .getElementById("visibility-on1")
   .addEventListener("click", hidePassword1);
 
   function showPassword2() {
@@ -694,3 +694,6 @@ document.addEventListener("keydown", function (event) {
     closePopup2();
   }
 });
+
+
+

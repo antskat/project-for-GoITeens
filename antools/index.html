@@ -55,7 +55,7 @@
           required
           class="login-popup-input-nickname"
           type="text"
-          name="login-nickname"
+          name="login_nickname"
           id="login-nickname"
           placeholder="John Doe"
         /><br />
@@ -67,7 +67,7 @@
           minlength="8"
           class="login-popup-input-password"
           type="password"
-          name="login-password"
+          name="login_password"
           id="login-password"
           placeholder="********"
         />
@@ -86,8 +86,14 @@
           src="./images/outline_visibility_black_24dp.png"
           alt="visibility on button"
         />
-        <button onclick="closePopup1()" class="login-btn" type="submit">Login</button>
-        <p class="or-register">or if you don`t <br> have account <a style="cursor: pointer;" onclick="changePopup2()">Sign up</a></p>
+        <button onclick="closePopup1()" class="login-btn" type="submit">
+          Login
+        </button>
+        <p class="or-register">
+          or if you don`t <br />
+          have account
+          <a style="cursor: pointer" onclick="changePopup2()">Sign up</a>
+        </p>
       </div>
 
       <div id="register-popup" class="register-popup">
@@ -96,7 +102,7 @@
         <a
           href="https://accounts.google.com/InteractiveLogin/signinchooser?continue=https%3A%2F%2Fwww.google.com%2Fwebhp%3Fauthuser%3D2&ec=GAZAmgQ&hl=ru&passive=true&ifkv=AYZoVhdfUDZiv8Uxr8dScsg7RLhVzL63Vx1ujWV6PLmALviGakZ9xUrx8MmMLZLrTmgB7ejf8B5rwQ&theme=glif&flowName=GlifWebSignIn&flowEntry=ServiceLogin"
         >
-          <button class="login-with " type="button">
+          <button class="login-with" type="button">
             <img
               src="./images/google-icon.png"
               alt="google logo"
@@ -107,7 +113,7 @@
           </button>
         </a>
         <a href="https://appleid.apple.com/sign-in">
-          <button class="login-with register-with-apple " type="button">
+          <button class="login-with register-with-apple" type="button">
             <img
               src="./images/apple-icon.png"
               alt="apple logo"
@@ -117,21 +123,24 @@
             Sign up with apple
           </button>
         </a>
-        <div class="register-popup-line1 "></div>
-        <div class="register-popup-or ">or</div>
-        <div class="register-popup-line2 "></div>
-        <label class="register-popup-label-nickname " for="login-nickname"
+        <div class="register-popup-line1"></div>
+        <div class="register-popup-or">or</div>
+        <div class="register-popup-line2"></div>
+        <label class="register-popup-label-nickname" for="login-nickname"
           >Nickname*</label
         ><br />
         <input
           required
-          class="register-popup-input-nickname "
+          class="register-popup-input-nickname"
           type="text"
           name="login-nickname"
           id="login-nickname"
           placeholder="John Doe"
         /><br />
-        <label class="register-popup-label-email" for="login-email">Email*</label> <br />
+        <label class="register-popup-label-email" for="login-email"
+          >Email*</label
+        >
+        <br />
         <input
           required
           type="text"
@@ -141,13 +150,13 @@
           placeholder="example@gmail.com"
         />
         <br />
-        <label class="register-popup-label-password " for="login-password"
+        <label class="register-popup-label-password" for="login-password"
           >Password*</label
         ><br />
         <input
           required
           minlength="8"
-          class="register-popup-input-password "
+          class="register-popup-input-password"
           type="password"
           name="login-password"
           id="register-password"
@@ -168,8 +177,14 @@
           src="./images/outline_visibility_black_24dp.png"
           alt="visibility on button"
         />
-        <button onclick="closePopup2()" class="register-btn " type="submit">Sign up</button>
-        <p class="or-login">or if you already <br> have account <a style="cursor: pointer;" onclick="changePopup1()">Login</a></p>
+        <button onclick="closePopup2()" class="register-btn" type="submit">
+          Sign up
+        </button>
+        <p class="or-login">
+          or if you already <br />
+          have account
+          <a style="cursor: pointer" onclick="changePopup1()">Login</a>
+        </p>
       </div>
 
       <header>
@@ -184,10 +199,10 @@
 
         <nav class="navigate">
           <ul>
-            <li>Home</li>
-            <li>Categories</li>
-            <li>My Collections</li>
-            <li>Blog</li>
+            <li><a href="">Home</a></li>
+            <li><a href="">Categories</a></li>
+            <li><a href="">My Collections</a></li>
+            <li><a href="">Blog</a></li>
           </ul>
         </nav>
 
@@ -872,18 +887,6 @@
                 </p>
               </div>
               <div class="swiper-slide">
-
-                <div id="resume-popup" class="resume-popup">
-                  <label for="upload-image">Upload your photo</label><br>
-                  <input type="file" name="upload-image" id="upload-image"><br>
-                  <label for="your-name">Write your real name</label><br>
-                  <input type="text" name="your-name" id="your-name" placeholder="John Doe"><br>
-                  <label for="your-profession">Write your profession</label><br>
-                  <input type="text" name="yout-profession" id="your-profession"><br>
-                  <h4>Wrtie your describtion</h4>
-                  <textarea name="your-descr" id="your-descr" cols="30" rows="28"></textarea>
-                </div>
-
                 <h2 class="your-title">You can add your resume</h2>
                 <h3 class="your-photo">Your photo</h3>
                 <div class="blurbg m">

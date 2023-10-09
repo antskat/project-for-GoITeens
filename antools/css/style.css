@@ -256,9 +256,9 @@ body {
   left: 208px;
 }
 .or-register {
-  position: relative;
-  top: -20px;
-  left: 170px;
+  position: absolute;
+  top: 362px;
+  left: 220px;
 }
 /* хедер */
 .logo {
