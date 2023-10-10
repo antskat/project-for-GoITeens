@@ -94,7 +94,7 @@ body {
   cursor: pointer;
   transition: all 0.3s;
 }
-.circlebg1{
+.circlebg1 {
   display: none;
   position: absolute;
   top: 7px;
@@ -177,7 +177,7 @@ body {
 .login-popup-input-nickname,
 .register-popup-input-password,
 .register-popup-input-nickname,
-.register-popup-input-email  {
+.register-popup-input-email {
   padding: 8px;
   border-radius: 8px;
   border: none;
@@ -290,6 +290,22 @@ body {
   margin-left: 50px;
   cursor: pointer;
 }
+.dropdown-content {
+  margin-top: 2px;
+  position: absolute;
+  margin-right: 10px;
+  display: none;
+  padding: 10px 10px 10px 0px;
+  line-height: 1.5;
+}
+.dropdown-content > a {
+  display: block;
+  font-size: 14px;
+}
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
 .login {
   width: 118px;
   height: 48px;
@@ -722,33 +738,33 @@ h1 > span {
   box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
   background-color: #2c353b;
 }
-.like-icon {
+/* .like-icon {
   position: relative;
   left: 1px;
   top: 3px;
   fill: white;
   opacity: 0.38;
 }
-.like-icon-active{
+.like-icon-active {
   position: relative;
   left: 1px;
   top: 3px;
-  fill: #FD3B41;
+  fill: #fd3b41;
   opacity: 1;
-}
-/* .like-icon-active,
-.like-icon {
-  position: relative;
-  top: 0px;
-}
-.like-icon {
-  position: relative;
 } */
-/* .like-icon-active {
+.like-icon-active,
+.like-icon {
   position: relative;
-  top: 0px;
+  top: 5px;
+}
+.like-icon {
+  position: relative;
+}
+.like-icon-active {
+  position: relative;
+  top: 5px;
   left: 1px;
-} */
+}
 .visitbtn {
   position: relative;
   bottom: 75px;
@@ -788,7 +804,7 @@ h1 > span {
 .visitbtn:active,
 .explore-more:active,
 .join-us:active {
-  transform: scale(1.03);
+  transform: scale(0.94);
 }
 .sign-up:active {
   background: var(--main-bg-color);
@@ -987,10 +1003,7 @@ h1 > span {
 .resume-popup {
   width: 800px;
   height: 400px;
-  background: radial-gradient(
-    var(--accent-color) 0%,
-    rgba(36, 44, 49, 1) 175%
-  );;
+  background: radial-gradient(var(--accent-color) 0%, rgba(36, 44, 49, 1) 175%);
 }
 
 .your-title {

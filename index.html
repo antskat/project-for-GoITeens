@@ -213,7 +213,15 @@
         <nav class="navigate">
           <ul>
             <li><a href="">Home</a></li>
-            <li><a href="">Categories</a></li>
+            <li>
+              <div class="dropdown">
+                <a href="">Categories</a>
+                <div class="dropdown-content">
+                  <a id="design-href">Design</a>
+                  <a id="development-href">Development</a>
+                </div>
+              </div>
+            </li>
             <li><a href="">My Collections</a></li>
             <li><a href="">Blog</a></li>
           </ul>
@@ -291,10 +299,10 @@
                 class="likebtn"
                 type="button"
               >
-              <svg id="like-icon" class="like-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" >
+              <!-- <svg id="like-icon" class="like-icon" xmlns="http://www.w3.org/2000/svg" width="26" height="22" viewBox="0 0 26 22" >
                 <path d="M18.8333 0.25C16.3833 0.25 14.225 1.475 13 3.4C11.775 1.475 9.61667 0.25 7.16667 0.25C3.31667 0.25 0.166672 3.4 0.166672 7.25C0.166672 14.1917 13 21.25 13 21.25C13 21.25 25.8333 14.25 25.8333 7.25C25.8333 3.4 22.6833 0.25 18.8333 0.25Z" fill-opacity="1"/>
-              </svg>
-                <!-- <img
+              </svg> -->
+                <img
                   id="like-icon1"
                   class="like-icon"
                   src="./images/like-icon.png"
@@ -307,7 +315,7 @@
                   src="./images/like-icon-active.png"
                   alt="like-icon-active"
                 />
-              </button> -->
+              </button> 
               <button onclick="addToFolder1()" class="folderbtn" type="button">
                 <svg
                   class="folderbtn-svg"

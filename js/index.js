@@ -128,28 +128,18 @@ li6.addEventListener("mouseout", (event) => {
 });
 
 function like1() {
-  const likebtn = document.getElementById("likebtn1");
-  let buttonClicked = false;
-  let elem = document.getElementById("like-icon");
+  let elem = document.getElementById("like-icon-active1");
   let style = getComputedStyle(elem);
-  if ((buttonClicked = false)) {
-    elem.classList.remove("like-icon");
-    elem.classList.add("like-icon-active");
-    buttonClicked = true;
-  } else if ((buttonClicked = true)) {
-    elem.classList.remove("like-icon-active");
-    elem.classList.add("like-icon");
+  if (style.display === "none") {
+    document.getElementById("like-icon-active1").style.display = "inline";
+    document.getElementById("like-icon1").style.display = "none";
+  } else if (style.display !== "none") {
+    document.getElementById("like-icon-active1").style.display = "none";
+    document.getElementById("like-icon1").style.display = "inline";
   }
-  console.log('Button was clicked');
 }
 
-// if (style.display === "none") {
-//   document.getElementById("like-icon-active1").style.display = "inline";
-//   document.getElementById("like-icon1").style.display = "none";
-// } else if (style.display !== "none") {
-//   document.getElementById("like-icon-active1").style.display = "none";
-//   document.getElementById("like-icon1").style.display = "inline";
-// }
+
 
 function like2() {
   let elem = document.getElementById("like-icon-active2");
