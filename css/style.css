@@ -713,27 +713,40 @@ h1 > span {
 }
 .likebtn {
   position: relative;
-  top: -70px;
+  top: -73px;
 }
 .likebtn:hover,
 .folderbtn:hover {
   box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
   background-color: #2c353b;
 }
-.like-icon-active,
+.like-icon {
+  position: relative;
+  left: 1px;
+  top: 3px;
+  fill: white;
+  opacity: 0.38;
+}
+.like-icon-active{
+  position: relative;
+  left: 1px;
+  top: 3px;
+  fill: #FD3B41;
+  opacity: 1;
+}
+/* .like-icon-active,
 .like-icon {
   position: relative;
   top: 0px;
 }
 .like-icon {
   position: relative;
-  /* top: 5px; */
-}
-.like-icon-active {
+} */
+/* .like-icon-active {
   position: relative;
   top: 0px;
   left: 1px;
-}
+} */
 .visitbtn {
   position: relative;
   bottom: 75px;

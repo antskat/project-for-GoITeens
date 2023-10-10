@@ -128,16 +128,29 @@ li6.addEventListener("mouseout", (event) => {
 });
 
 function like1() {
-  let elem = document.getElementById("like-icon-active1");
+  const likebtn = document.getElementById("likebtn1");
+  let buttonClicked = false;
+  let elem = document.getElementById("like-icon");
   let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active1").style.display = "inline";
-    document.getElementById("like-icon1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active1").style.display = "none";
-    document.getElementById("like-icon1").style.display = "inline";
+  if ((buttonClicked = false)) {
+    elem.classList.remove("like-icon");
+    elem.classList.add("like-icon-active");
+    buttonClicked = true;
+  } else if ((buttonClicked = true)) {
+    elem.classList.remove("like-icon-active");
+    elem.classList.add("like-icon");
   }
+  console.log('Button was clicked');
 }
+
+// if (style.display === "none") {
+//   document.getElementById("like-icon-active1").style.display = "inline";
+//   document.getElementById("like-icon1").style.display = "none";
+// } else if (style.display !== "none") {
+//   document.getElementById("like-icon-active1").style.display = "none";
+//   document.getElementById("like-icon1").style.display = "inline";
+// }
+
 function like2() {
   let elem = document.getElementById("like-icon-active2");
   let style = getComputedStyle(elem);
@@ -566,36 +579,36 @@ document
   .getElementById("visibility-on1")
   .addEventListener("click", hidePassword1);
 
-  function showPassword2() {
-    var x = document.getElementById("register-password");
-    if (x.type === "password") {
-      x.type = "text";
-      document.getElementById("visibility-off").style.display = "none";
-      document.getElementById("visibility-on").style.display = "block";
-    } else {
-      x.type = "password";
-      document.getElementById("visibility-off").style.display = "block";
-      document.getElementById("visibility-on").style.display = "none";
-    }
+function showPassword2() {
+  var x = document.getElementById("register-password");
+  if (x.type === "password") {
+    x.type = "text";
+    document.getElementById("visibility-off").style.display = "none";
+    document.getElementById("visibility-on").style.display = "block";
+  } else {
+    x.type = "password";
+    document.getElementById("visibility-off").style.display = "block";
+    document.getElementById("visibility-on").style.display = "none";
   }
-  function hidePassword2() {
-    var x = document.getElementById("register-password");
-    if (x.type === "text") {
-      x.type = "password";
-      document.getElementById("visibility-off").style.display = "block";
-      document.getElementById("visibility-on").style.display = "none";
-    } else {
-      x.type = "text";
-      document.getElementById("visibility-off").style.display = "none";
-      document.getElementById("visibility-on").style.display = "block";
-    }
+}
+function hidePassword2() {
+  var x = document.getElementById("register-password");
+  if (x.type === "text") {
+    x.type = "password";
+    document.getElementById("visibility-off").style.display = "block";
+    document.getElementById("visibility-on").style.display = "none";
+  } else {
+    x.type = "text";
+    document.getElementById("visibility-off").style.display = "none";
+    document.getElementById("visibility-on").style.display = "block";
   }
-  document
-    .getElementById("visibility-off")
-    .addEventListener("click", showPassword2);
-  document
-    .getElementById("visibility-on")
-    .addEventListener("click", hidePassword2);
+}
+document
+  .getElementById("visibility-off")
+  .addEventListener("click", showPassword2);
+document
+  .getElementById("visibility-on")
+  .addEventListener("click", hidePassword2);
 var loginBtn = document.getElementById("login");
 var signUpBtn = document.getElementById("sign-up");
 var closeLoginPopupBtn = document.getElementById("closebtn1");
@@ -665,27 +678,27 @@ function closePopup2() {
   }
 }
 function hoverCloseBtn() {
-  document.getElementById('circlebg1').style.display = 'block'
+  document.getElementById("circlebg1").style.display = "block";
 }
 function hoverCloseBtnn() {
-  document.getElementById('circlebg1').style.display = 'none'
+  document.getElementById("circlebg1").style.display = "none";
 }
 function changePopup1() {
-  document.getElementById('login-popup').style.display = 'block';
-  document.getElementById('register-popup').style.display = 'none';
+  document.getElementById("login-popup").style.display = "block";
+  document.getElementById("register-popup").style.display = "none";
 }
 function changePopup2() {
-  document.getElementById('login-popup').style.display = 'none';
-  document.getElementById('register-popup').style.display = 'block';
+  document.getElementById("login-popup").style.display = "none";
+  document.getElementById("register-popup").style.display = "block";
 }
-signUpBtn.addEventListener('click', showPopup2);
+signUpBtn.addEventListener("click", showPopup2);
 loginBtn.addEventListener("click", showPopup1);
 closeLoginPopupBtn.addEventListener("click", closePopup1);
-closeLoginPopupBtn.addEventListener('mouseover', hoverCloseBtn);
-closeLoginPopupBtn.addEventListener('mouseout', hoverCloseBtnn);
+closeLoginPopupBtn.addEventListener("mouseover", hoverCloseBtn);
+closeLoginPopupBtn.addEventListener("mouseout", hoverCloseBtnn);
 closeRegisterPopupBtn.addEventListener("click", closePopup2);
-closeRegisterPopupBtn.addEventListener('mouseover', hoverCloseBtn);
-closeRegisterPopupBtn.addEventListener('mouseout', hoverCloseBtnn);
+closeRegisterPopupBtn.addEventListener("mouseover", hoverCloseBtn);
+closeRegisterPopupBtn.addEventListener("mouseout", hoverCloseBtnn);
 blurbg.addEventListener("click", closePopup1);
 blurbg.addEventListener("click", closePopup2);
 document.addEventListener("keydown", function (event) {
@@ -694,6 +707,3 @@ document.addEventListener("keydown", function (event) {
     closePopup2();
   }
 });
-
-
-
