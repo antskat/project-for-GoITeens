@@ -67,9 +67,6 @@ body {
   margin-top: 150px;
   left: 700px;
 }
-.login-popup {
-  display: block;
-}
 .closeLoginPopupBtn {
   position: absolute;
   top: 20px;
