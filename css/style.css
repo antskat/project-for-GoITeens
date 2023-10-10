@@ -56,8 +56,8 @@ body {
     rgba(36, 44, 49, 1) 125%
   );
   transition: 0.3s;
-  width: 329px;
-  height: 343px;
+  width: 425px;
+  height: 463px;
   padding: 60px 48px;
   gap: 24px;
   border: 3px solid black;
@@ -66,6 +66,9 @@ body {
   z-index: 9999;
   margin-top: 150px;
   left: 700px;
+}
+.login-popup {
+  display: block;
 }
 .closeLoginPopupBtn {
   position: absolute;
@@ -129,10 +132,12 @@ body {
 }
 .login-popup-line1,
 .register-popup-line1 {
+  position: relative;
   width: 119.5px;
   gap: 10px;
   height: 1px;
   background: #bcccdc;
+  top: -7px;
   margin-top: 33px;
   margin-left: 22px;
 }
@@ -140,7 +145,7 @@ body {
 .register-popup-or {
   position: relative;
   left: 153px;
-  top: -14px;
+  top: -16px;
   color: #bcccdc;
 }
 .login-popup-line2,
@@ -192,19 +197,19 @@ body {
 }
 .visibility-off {
   position: relative;
-  left: 285px;
+  left: 270px;
   top: -27px;
 }
 .visibility-on {
   display: none;
   position: relative;
-  left: 285px;
+  left: 270px;
   top: -27px;
 }
 .login-btn,
 .register-btn {
   position: absolute;
-  top: 380px;
+  top: 370px;
   left: 157px;
   width: 118px;
   height: 48px;
@@ -219,7 +224,7 @@ body {
   cursor: pointer;
 }
 .login-btn {
-  left: 90px;
+  left: 80px;
 }
 .login-btn:hover,
 .login-btn:focus,
@@ -244,7 +249,7 @@ body {
   display: none;
 }
 .register-btn {
-  top: 401px;
+  top: 391px;
   left: 78px;
 }
 .register {
@@ -258,7 +263,7 @@ body {
 .or-register {
   position: absolute;
   top: 362px;
-  left: 220px;
+  left: 210px;
 }
 /* хедер */
 .logo {
