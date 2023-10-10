@@ -738,7 +738,7 @@ h1 > span {
   box-shadow: 0 5px 10px -3px rgba(18, 18, 18, 0.15);
   background-color: #2c353b;
 }
-/* .like-icon {
+.like-icon {
   position: relative;
   left: 1px;
   top: 3px;
@@ -751,19 +751,6 @@ h1 > span {
   top: 3px;
   fill: #fd3b41;
   opacity: 1;
-} */
-.like-icon-active,
-.like-icon {
-  position: relative;
-  top: 5px;
-}
-.like-icon {
-  position: relative;
-}
-.like-icon-active {
-  position: relative;
-  top: 5px;
-  left: 1px;
 }
 .visitbtn {
   position: relative;

@@ -128,72 +128,60 @@ li6.addEventListener("mouseout", (event) => {
 });
 
 function like1() {
-  let elem = document.getElementById("like-icon-active1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active1").style.display = "inline";
-    document.getElementById("like-icon1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active1").style.display = "none";
-    document.getElementById("like-icon1").style.display = "inline";
+  if (document.getElementById("like-icon1").classList.contains("like-icon")) {
+    document.getElementById("like-icon1").classList.remove("like-icon");
+    document.getElementById("like-icon1").classList.add("like-icon-active");
+    localStorage.setItem('currentColor', "#fd3b41");
+  } else {
+    document.getElementById("like-icon1").classList.remove("like-icon-active");
+    document.getElementById("like-icon1").classList.add("like-icon");
+    localStorage.setItem('currentColor', "white");
   }
 }
 
-
-
 function like2() {
-  let elem = document.getElementById("like-icon-active2");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active2").style.display = "inline";
-    document.getElementById("like-icon2").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active2").style.display = "none";
-    document.getElementById("like-icon2").style.display = "inline";
+  if (document.getElementById("like-icon2").classList.contains("like-icon")) {
+    document.getElementById("like-icon2").classList.remove("like-icon");
+    document.getElementById("like-icon2").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon2").classList.remove("like-icon-active");
+    document.getElementById("like-icon2").classList.add("like-icon");
   }
 }
 function like3() {
-  let elem = document.getElementById("like-icon-active3");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active3").style.display = "inline";
-    document.getElementById("like-icon3").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active3").style.display = "none";
-    document.getElementById("like-icon3").style.display = "inline";
+  if (document.getElementById("like-icon3").classList.contains("like-icon")) {
+    document.getElementById("like-icon3").classList.remove("like-icon");
+    document.getElementById("like-icon3").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon3").classList.remove("like-icon-active");
+    document.getElementById("like-icon3").classList.add("like-icon");
   }
 }
 function like4() {
-  let elem = document.getElementById("like-icon-active4");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active4").style.display = "inline";
-    document.getElementById("like-icon4").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active4").style.display = "none";
-    document.getElementById("like-icon4").style.display = "inline";
+  if (document.getElementById("like-icon4").classList.contains("like-icon")) {
+    document.getElementById("like-icon4").classList.remove("like-icon");
+    document.getElementById("like-icon4").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon4").classList.remove("like-icon-active");
+    document.getElementById("like-icon4").classList.add("like-icon");
   }
 }
 function like5() {
-  let elem = document.getElementById("like-icon-active5");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active5").style.display = "inline";
-    document.getElementById("like-icon5").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active5").style.display = "none";
-    document.getElementById("like-icon5").style.display = "inline";
+  if (document.getElementById("like-icon5").classList.contains("like-icon")) {
+    document.getElementById("like-icon5").classList.remove("like-icon");
+    document.getElementById("like-icon5").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon5").classList.remove("like-icon-active");
+    document.getElementById("like-icon5").classList.add("like-icon");
   }
 }
 function like6() {
-  let elem = document.getElementById("like-icon-active6");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active6").style.display = "inline";
-    document.getElementById("like-icon6").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active6").style.display = "none";
-    document.getElementById("like-icon6").style.display = "inline";
+  if (document.getElementById("like-icon6").classList.contains("like-icon")) {
+    document.getElementById("like-icon6").classList.remove("like-icon");
+    document.getElementById("like-icon6").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon6").classList.remove("like-icon-active");
+    document.getElementById("like-icon6").classList.add("like-icon");
   }
 }
 
@@ -283,69 +271,39 @@ li41.addEventListener("mouseout", (event) => {
     "rgba(255, 255, 255, 0.55)";
 });
 function like11() {
-  let elem = document.getElementById("like-icon-active1-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active1-1").style.display = "inline";
-    document.getElementById("like-icon1-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active1-1").style.display = "none";
-    document.getElementById("like-icon1-1").style.display = "inline";
+  if (document.getElementById("like-icon11").classList.contains("like-icon")) {
+    document.getElementById("like-icon11").classList.remove("like-icon");
+    document.getElementById("like-icon11").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon11").classList.remove("like-icon-active");
+    document.getElementById("like-icon11").classList.add("like-icon");
   }
 }
 function like21() {
-  let elem = document.getElementById("like-icon-active2-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active2-1").style.display = "inline";
-    document.getElementById("like-icon2-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active2-1").style.display = "none";
-    document.getElementById("like-icon2-1").style.display = "inline";
+  if (document.getElementById("like-icon21").classList.contains("like-icon")) {
+    document.getElementById("like-icon21").classList.remove("like-icon");
+    document.getElementById("like-icon21").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon21").classList.remove("like-icon-active");
+    document.getElementById("like-icon21").classList.add("like-icon");
   }
 }
 function like31() {
-  let elem = document.getElementById("like-icon-active3-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active3-1").style.display = "inline";
-    document.getElementById("like-icon3-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active3-1").style.display = "none";
-    document.getElementById("like-icon3-1").style.display = "inline";
+  if (document.getElementById("like-icon31").classList.contains("like-icon")) {
+    document.getElementById("like-icon31").classList.remove("like-icon");
+    document.getElementById("like-icon31").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon31").classList.remove("like-icon-active");
+    document.getElementById("like-icon31").classList.add("like-icon");
   }
 }
 function like41() {
-  let elem = document.getElementById("like-icon-active4-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active4-1").style.display = "inline";
-    document.getElementById("like-icon4-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active4-1").style.display = "none";
-    document.getElementById("like-icon4-1").style.display = "inline";
-  }
-}
-function like51() {
-  let elem = document.getElementById("like-icon-active5-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active5-1").style.display = "inline";
-    document.getElementById("like-icon5-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active5-1").style.display = "none";
-    document.getElementById("like-icon5-1").style.display = "inline";
-  }
-}
-function like61() {
-  let elem = document.getElementById("like-icon-active6-1");
-  let style = getComputedStyle(elem);
-  if (style.display === "none") {
-    document.getElementById("like-icon-active6-1").style.display = "inline";
-    document.getElementById("like-icon6-1").style.display = "none";
-  } else if (style.display !== "none") {
-    document.getElementById("like-icon-active6-1").style.display = "none";
-    document.getElementById("like-icon6-1").style.display = "inline";
+  if (document.getElementById("like-icon41").classList.contains("like-icon")) {
+    document.getElementById("like-icon41").classList.remove("like-icon");
+    document.getElementById("like-icon").classList.add("like-icon-active");
+  } else {
+    document.getElementById("like-icon41").classList.remove("like-icon-active");
+    document.getElementById("like-icon41").classList.add("like-icon");
   }
 }
 
