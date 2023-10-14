@@ -300,7 +300,7 @@ function like31() {
 function like41() {
   if (document.getElementById("like-icon41").classList.contains("like-icon")) {
     document.getElementById("like-icon41").classList.remove("like-icon");
-    document.getElementById("like-icon").classList.add("like-icon-active");
+    document.getElementById("like-icon41").classList.add("like-icon-active");
   } else {
     document.getElementById("like-icon41").classList.remove("like-icon-active");
     document.getElementById("like-icon41").classList.add("like-icon");
@@ -575,6 +575,7 @@ function showPopup1() {
   if (style.display === "block") {
     document.getElementById("blur-bg").style.display = "block";
     document.body.style.overflowY = "hidden";
+    document.body.style.width = '100%'
   } else if (style.display !== "block") {
     document.getElementById("blur-bg").style.display = "none";
     document.body.style.overflowY = "scroll";
