@@ -35,11 +35,9 @@ body {
   background: var(--main-bg-color);
 }
 .container {
-  position: relative;
-  max-width: 1440px;
-  margin: 0px auto;
-  top: -20px;
-  /* border: 1px solid white; */
+  width: 1390px;
+  margin: 0 auto;
+  padding: 0 15px;
 }
 body {
   font-family: Poppins;
@@ -61,11 +59,12 @@ body {
   padding: 60px 48px;
   gap: 24px;
   border: 3px solid black;
-  position: fixed;
+  position: absolute;
+  top: 45%;
+  left: 49%;
+  transform: translate(-50%, -50%);
   border-radius: 40px;
   z-index: 9999;
-  margin-top: 150px;
-  left: 700px;
 }
 .closeLoginPopupBtn {
   position: absolute;
@@ -284,7 +283,7 @@ body {
 .navigate > ul {
   display: flex;
   flex-direction: row;
-  transform: translateY(-67px);
+  transform: translateY(-63px);
 }
 .navigate > ul > li {
   margin-left: 50px;
@@ -320,7 +319,7 @@ body {
   font-weight: 600;
   line-height: normal;
   margin-left: 1115px;
-  transform: translateY(-120px);
+  transform: translateY(-114px);
   cursor: pointer;
 }
 .sign-up {
@@ -336,7 +335,7 @@ body {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  transform: translateY(-120px);
+  transform: translateY(-114px);
   cursor: pointer;
 }
 /* типа второй хедер */
@@ -402,7 +401,7 @@ h1 > span {
   font-style: normal;
   font-weight: 600;
   line-height: normal;
-  transform: translate(119px, 8px);
+  transform: translate(119px, 7px);
   cursor: pointer;
 }
 .search-btn:active {
@@ -952,8 +951,7 @@ h1 > span {
   backdrop-filter: blur(25px);
   transform: translate(330px, -120px);
 }
-.swiper-man-name,
-.your-name {
+.swiper-man-name {
   color: rgba(255, 253, 253, 0.78);
   font-size: 26px;
   font-style: normal;
@@ -963,8 +961,7 @@ h1 > span {
   margin-left: 23px;
   transform: translateY(-17px);
 }
-.swiper-man-profession,
-.your-profession {
+.swiper-man-profession {
   color: rgba(255, 253, 253, 0.55);
   font-size: 16px;
   font-style: normal;
@@ -987,66 +984,6 @@ h1 > span {
   transform: translate(700px, -600px);
 }
 
-.resume-popup {
-  width: 800px;
-  height: 400px;
-  background: radial-gradient(var(--accent-color) 0%, rgba(36, 44, 49, 1) 175%);
-}
-
-.your-title {
-  color: rgba(255, 255, 255, 0.9);
-  text-align: center;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 62.4px;
-}
-.your-photo {
-  color: rgba(255, 255, 255, 0.9);
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: 62.4px;
-  transform: translate(300px, 50px);
-}
-.m {
-  transform: translate(330px, 100px);
-}
-.descr {
-  color: rgba(255, 255, 255, 0.78);
-  font-family: Roboto;
-  font-size: 34px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 30px; /* 214.286% */
-  letter-spacing: 0.21px;
-  transform: translate(800px, -210px);
-}
-.decor1 {
-  transform: translate(750px, -150px);
-}
-.add-resume {
-  width: 198px;
-  height: 58px;
-  flex-shrink: 0;
-  border: none;
-  border-radius: 8px;
-  background: #ff6e30;
-
-  color: #fff;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 500;
-  line-height: normal;
-  text-align: center;
-  transform: translate(480px, -50px);
-  cursor: pointer;
-}
-.add-resume:active {
-  background: var(--main-bg-color);
-  border: 2px solid var(--accent-color);
-}
-
 .contributor {
   width: 553px;
   height: 311px;
@@ -1059,8 +996,9 @@ h1 > span {
   text-align: center;
 }
 .contributor-signature {
+  position: relative;
   width: 427px;
-  margin-left: 63px;
+  left: 63px;
 }
 .box-email {
   width: 549px;
@@ -1113,6 +1051,7 @@ footer > p {
 .copyright {
   max-width: 280px;
   top: 240px;
+  padding: 0;
 }
 .footer-line {
   position: relative;
@@ -1157,4 +1096,14 @@ footer > h5 {
   font-weight: 500;
   line-height: normal;
   margin-top: -60px;
+}
+.swiper-button-prev {
+  position: relative;
+  left: 200px;
+  top: -1055px;
+}
+.swiper-button-next {
+  position: relative;
+  left: 1300px;
+  top: -1078px;
 }
